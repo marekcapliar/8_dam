@@ -50,7 +50,7 @@ def insert_queen(sachovnica):
         for x in range(len(sachovnica[0])):
             if sachovnica[y][x] == 1:
                 img.paste(queen, (x*policko, y*policko), queen)
-    name = 'damy/solutions/' + str(count) + '.png'
+    name = str(count) + '.png'
     img.save(name)
     img = GUI_sachovnica()
 
@@ -65,7 +65,7 @@ count = 0
 policko = 100
 img = GUI_sachovnica()
 
-queen = Image.open('damy/queen.png')
+queen = Image.open('queen.png')
 queen = queen.resize((policko, policko))
 
 drticka(0)
